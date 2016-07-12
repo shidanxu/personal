@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel='stylesheet' href='/stylesheets/google-maps.css' />
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' />
+    <title>Hiproute | Eliminate Agony</title>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCElT0LNyuYhaZ4-1b4ClIukm7To97zgZ4"></script>
+    <script src='/javascripts/util.js'></script>
+    <script src='/javascripts/hiprouteMain.js'></script>
+    <script src='/javascripts/agony.js'></script>
+    <script src='/javascripts/calculateRoute.js'></script>
+    <script src='/javascripts/sortDisplay.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <form id = "hiproute" onsubmit="calcRoute();event.preventDefault();">
+      <input id="pac-input" class="controls" type="text" placeholder="Enter Origin" value = "">
+      <input id="pac-input2" class="controls" type="text" placeholder="Enter Destination" value = "">
+      <input id ="route" class = "controls" type = "submit" value = "HipRoute!" >
+    </form>
+    <div id="prefs">
+      <div class='row'>
+      <label class='col-md-3'>Save &nbsp;<i class='fa fa-clock-o'></i></label>
+      <input class='col-md-6' max='100' min='1' onmouseup="setPrefVals()" style="width:50%" type='range' id='tradeOff'>
+      <label class='col-md-3'>Save &nbsp;$</label>
+      </div>
+      <div class='row'>
+        <div class='col-md-6 bike-option'><input type='radio' onclick="setOwn()" id='ownBike' checked><label>Own Bike</label></div>
+
+        <div class='col-md-6 bike-option'><input type='radio' onclick="setHubway()" id='hubway'><label>Hubway</label></div>
+        </div>
+    </div>
+    <% include _searchBox.ejs %>
+
+    <div id="map-canvas"></div>
+    <div id="loadingOverlay"style="display:none">
+      <p>Loading...</p>
+    <div>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      .controls {
+        margin-top: 16px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 400px;
+        max-width: 400px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        left:88px !important;
+        top:33px !important;
+        z-index:2 !important;
+        
+      }
+      #pac-input2 {
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 400px;
+        max-width: 400px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        left:88px !important;
+        top:66px !important;
+        z-index:2 !important;
+        
+      }
+      #route {
+        padding: 0 11px 0 13px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        left:500px !important;
+        top:66px !important;
+        z-index:2 !important;
+        
+      }
+      .input-active {
+        left:88px !important;
+        top:33px !important;
+      }
+
+      #pac-input:focus, #pac-input2:focus, .searchbox-container:focus{
+        border-color: #4d90fe;
+        margin-left: -1px;
+        padding-left: 14px;  /* Regular padding-left + 1. */
+        width: 401px;
+      }
+
+      
+      .searchbox-container{
+        position:absolute;
+        z-index:1 !important;
+        left:88px !important;
+        top:0px ;
+
+      }
+      .clear-holder{
+        height:113px;
+        z-index:1;
+      }
+      .selectedRoute{
+        background-color:#BBBBBB;
+      }
+      .results-line:hover{
+        background-color: #DDDDDD
+      }
+      #myTab{
+        background-color:#FFFFFF;
+        z-index:1;
+      }
+      #myTabContent{
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        margin-top:112px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+      .tab-pane{
+        background-color:#FFFFFF;
+        border:1px solid #222222;
+        border-radius:2px;
+        padding:5px;
+      }
+      #loadingOverlay{
+        height:100%;
+        width:100%;
+        z-index:99999 !important;
+        background-color: #888888;
+        opacity: 0.5;
+        transition:0.5s;
+        top: 0px !important;
+        left:0px !important;
+      }
+      #loadingOverlay p{
+        text-align:center;
+        padding-top:15%;
+        color:#FFFFFF;
+        font-size:45px;
+        font-family:helvetica;
+        opacity:1;
+      }
+      #prefs{
+        position:absolute;
+        background-color:#FFFFFF;
+        left:88px !important;
+        top:115px !important;
+        width:400px;
+        z-index:2 !important;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+      }
+      .bike-option{
+        text-align:center;
+      }
+      .bike-option label{
+        margin-left:5px;
+      }
+      #prefs label{
+        font-size:11px;
+        text-align:center;
+      }
+      #tradeOff{
+        margin:0;
+      }
+      .pac-container {
+        font-family: Roboto;
+      }
+      .results-line{
+        padding:5px;
+        height:30px;
+        border:1px solid #AAAAAA;
+        border-radius:3px;
+        margin-bottom: 5px;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+}
+      #target {
+        width: 345px;
+      }

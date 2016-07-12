@@ -1,0 +1,3 @@
+* MBTA, using a global value is ok. This is a design decision
+* No users in the system is ok for MVP
+* For uber api, choose the cheapest car for the MVP. Can use agony calculation for MVP+

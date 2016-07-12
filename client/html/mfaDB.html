@@ -1,0 +1,221 @@
+<!-- Lead author: Shidan Xu and Neil Gurram -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Testing MFA </title>
+<link rel="stylesheet" type="text/css" href="../css/mfa.css"/>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/mfa.js"></script>
+</head>
+<body>
+<a href="/admin" style="float:right;"><font size=4 color="red">Log Out</font></a>
+<h1>MFA Maintenance Page</h1>
+   <table>
+   <tr>
+      <td>
+          1. Manage Artwork
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <form>
+            <fieldset>
+               <label for="accessnumber" id="accessnumber_label">Access Number:</label>
+               <input type="text" name="accessnumber" id="accessnumber"/>
+               <label for="name" id="name_label">Name:</label>
+               <input type="text" name="name" id="name"/>
+               <label for="galleryName" id="galleryName_label">Gallery Name:</label>
+               <input type="text" name="galleryName" id="galleryName" size="30" value="" class="text-input"/>
+               <label for="author" id="author_label">Author:</label>
+               <input type="text" name="author" id="author" size="30" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="new_artwork" value="Add"/>
+            </fieldset>
+         </form>
+      </td>
+      <td rowspan="4" valign=top>
+         <form>
+            <fieldset>
+               <input type="submit" name="submit" class="button" id="display_artwork_btn" value="Display All Artworks"/>
+            </fieldset>
+         </form>
+         <div id="display_artwork_p">
+         </div>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <form>
+            <fieldset>
+               <label id="artid_label">Art ID:</label>
+               <input type="text" name="artID" id="artID" size="30" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="delete_artwork" value="Delete"/>
+            </fieldset>
+         </form>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <form>
+            <fieldset>
+               <label for="artID" id="artid_label">Art ID:</label>
+               <input type="text" name="findartID" id="findartID" size="20" value="" class="text-input"/>
+               <label for="name" id="name_label">New Name:</label>
+               <input type="text" name="newname" id="newname"/>
+               <label for="galleryname" id="galleryname_label">New Gallery Name:</label>
+               <input type="text" name="newgalleryname" id="newgalleryname" size="20" value="" class="text-input"/>
+               <label for="author" id="author_label">New Author:</label>
+               <input type="text" name="newauthor" id="newauthor" size="25" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="update_artwork" value="Update"/>
+            </fieldset>
+         </form>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <form>
+            <fieldset>
+               <label id "artid">Art ID:</label>
+               <input type="text" name="findwayID" id="displayartwork" size="20" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="display_artwork" value="Find an Art"/>
+            </fieldset>
+         </form>
+      </td>
+   </tr>
+   <tr>
+      <td>
+          2. Manage Gallery
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <form>
+            <fieldset>
+               <label id="name">Gallery Name:</label>
+               <input type="text" name="name" id="nameGallery"/>
+               <label id="x">X coordinate:</label>
+               <input type="text" name="x" id="x"/>
+               <label id="y">Y coordinate:</label>
+               <input type="text" name="y" id="y" size="30" value="" class="text-input"/>
+               <label id="artworks">Artworks:</label>
+               <input type="text" name="artworks" id="artworks" size="30" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="new_gallery" value="Add"/>
+            </fieldset>
+         </form>
+      </td>
+      <td rowspan="4" valign=top>
+         <form>
+            <fieldset>
+               <input type="submit" name="submit" class="button" id="display_galleries" value="Display All Galleries"/>
+            </fieldset>
+         </form>
+         <div id="display_gallery_p">
+         </div>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <form>
+            <fieldset>
+               <label id "galleryid">Gallery ID:</label>
+               <input type="text" name="galleryID" id="galleryID" size="30" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="delete_gallery" value="Delete"/>
+            </fieldset>
+         </form>
+         </td></tr>
+         <tr><td>
+         <form>
+            <fieldset>
+               <label id "galleryid">Gallery ID:</label>
+               <input type="text" name="findgalleryID" id="findgalleryID" size="20" value="" class="text-input"/>
+               <label id="name_label">New Name:</label>
+               <input type="text" name="newnameG" id="name"/>
+               <label id="newX">New X Coordinate:</label>
+               <input type="text" name="newX" id="newX" size="20" value="" class="text-input"/>
+               <label id="newY">New Y Coordinate:</label>
+               <input type="text" name="newY" id="newY" size="25" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="update_gallery" value="Update"/>
+            </fieldset>
+         </form>
+         </td></tr>
+         <tr><td>
+         <form>
+            <fieldset>
+               <label id "wayid">Gallery ID:</label>
+               <input type="text" name="findwayID" id="displaygallery" size="20" value="" class="text-input"/>
+               <input type="submit" name="submit" class="button" id="display_gallery" value="Find a Gallery"/>
+            </fieldset>
+         </form>
+         </td></tr>
+   <tr>
+   <td>
+       3. Manage Way
+   </td>
+   </tr>
+   <tr>
+   <td>
+      <form>
+         <fieldset>
+            <label id="name">Way Name:</label>
+            <input type="text" name="name" id="nameWay"/>
+            <label id="desc">Description:</label>
+            <input type="text" name="description" id="description"/>
+            <label id="galleries">Galleries:</label>
+            <input type="text" name="galleries" id="galleries" size="30" value="" class="text-input"/>
+            <input type="submit" name="submit" class="button" id="new_way" value="Add"/>
+         </fieldset>
+      </form>
+   </td>
+   <td rowspan="4"  valign=top>
+      <form>
+         <fieldset>
+            <input type="submit" name="submit" class="button" id="display_ways" value="Display All Ways"/>
+         </fieldset>
+      </form>
+      <div id="display_way_p">
+         </div>
+   </td>
+   </tr>
+   <tr>
+   <td>
+      <form>
+         <fieldset>
+            <label id "wayid">Way ID:</label>
+            <input type="text" name="wayID" id="wayID" size="30" value="" class="text-input"/>
+            <input type="submit" name="submit" class="button" id="delete_way" value="Delete"/>
+         </fieldset>
+      </form>
+   </td>
+   </tr>
+   <tr>
+   <td>
+      <form>
+         <fieldset>
+            <label id "wayid">Way ID:</label>
+            <input type="text" name="findwayID" id="findwayID" size="20" value="" class="text-input"/>
+            <label id="name_label">New Name:</label>
+            <input type="text" name="newnameW" id="newnameW"/>
+            <label id="newX">New Description:</label>
+            <input type="text" name="newDescription" id="newDescription" size="20" value="" class="text-input"/>
+            <label id="newGallery">New Galleries:</label>
+            <input type="text" name="newGalleries" id="newGalleries" size="25" value="" class="text-input"/>
+            <input type="submit" name="submit" class="button" id="update_way" value="Update"/>
+         </fieldset>
+      </form>
+   </td>
+   </tr>
+   <tr>
+   <td>
+      <form>
+         <fieldset>
+            <label id "wayid">Way ID:</label>
+            <input type="text" name="findwayID" id="displayway" size="20" value="" class="text-input"/>
+            <input type="submit" name="submit" class="button" id="display_way" value="Find a Way"/>
+         </fieldset>
+      </form>
+   </td>
+   </tr>
+   </table>
+</body>
+</html>

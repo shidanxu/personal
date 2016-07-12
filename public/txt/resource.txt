@@ -1,0 +1,24 @@
+1. MFA
+    - [done] floor plan: http://www.mfa.org/visit/plan-your-visit/floorplans
+    - [todo] item retrieval: 
+        . MFA: 
+            = list one item: http://www.mfa.org/collections/object/turn-in-the-road-33254
+            = list all item: http://www.mfa.org/collections/search?f[0]=field_onview%3A1
+            = list one page: http://www.mfa.org/collections/search?search_api_views_fulltext=&page=6&f[0]=field_onview%3A1
+        . google art: https://www.google.com/culturalinstitute/collection/museum-of-fine-arts-boston?projectId=art-project
+    - virtual tour: https://www.youtube.com/watch?v=vMb8prTLhK8
+    - google indoor map: navigation
+        . https://www.google.com/maps/about/partners/businessview/
+2. js library
+    - backbone.js:
+        . https://github.com/jashkenas/backbone/wiki/Tutorials,-blog-posts-and-example-sites
+    - angular.js:
+        .
+
+3. ajax example:
+    - http://www.noupe.com/development/most-wanted-ajax-techniques-50-ajax-examples-and-tutorials.html
+        * valid item name, auto-completer
+        * shopping cart
+        * image gallery
+    - http://codegeekz.com/jquery-image-gallery-plugins/
+        * http://rvera.github.io/image-picker/

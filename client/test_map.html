@@ -1,0 +1,65 @@
+<html>
+    <head>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/api_config.js"></script>
+    <script src="js/api_core.js"></script>
+    <script src="js/api_util.js"></script>
+    </head>
+    <body>
+        <h1>Test Load Image</h1>
+        <b>Name:</b> <p id="name"></p>
+        <b>Description:</b> <p id="description"></p>
+        <b>Roads:</b> <p id="roads"></p>
+        <b>Galleries:</b> <p id="galleries"></p>
+        <b>Image:</b> <img id="target" />
+        <br/>
+        <h1>Test way search</h1>
+        <b>Returned Ways:</b> <p id="way"></p>
+    <script>
+    var test_id = 2;
+    switch(test_id){
+        case 1:
+        // test pre-loaded map image
+        MyWay.GetObj('/mfa/map/',function(Mycontent){
+            var map = Mycontent.maps[0];
+                U_setimage("#target",map.image);
+                $("#name").text(map.name);
+                $("#description").text(map.description);
+                $("#roads").text(map.roads);
+                $("#galleries").text(map.galleries);
+            });
+        break;
+        case 2:
+        // test uploaded map image
+        var input = "326, 327, 328";
+        var splitted = input.split(",");
+        
+        for (i = 0; i < splitted.length; i++){
+            splitted[i] = splitted[i].trim();
+        }
+
+        var queryname = "";
+        var newstring;
+        var newstraing2;
+
+        for (i = 0; i < splitted.length -1; i++){
+            queryname = splitted[i]+"_"+splitted[i+1];
+            queryname.replace("\r", "");
+            //alert(queryname);
+
+            MyWay.SearchWay({name:queryname},function(Mycontent){
+            var way = Mycontent.way;
+            alert(JSON.stringify(way));
+            newstring = $("#way").text();
+            for (j = 0; j < way.length; j++){
+                newstring2 = newstring + JSON.stringify(way);
+            }
+            $("#way").text(newstring2);
+        });
+        }
+        break;
+    }
+    </script>
+
+    </body>
+</html>

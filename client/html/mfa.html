@@ -1,0 +1,48 @@
+<!-- Lead author: Neil Gurram -->
+<html>
+    <head>
+    <title>
+    MFA Database Management
+    </title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/mfa.js"></script>
+    </head>
+    <body>
+
+    <div id="login_form" style="float:left">
+    <h1>
+    Login
+    </h1>
+	<form name="mfaLogin" data-redirect="on">
+  	<fieldset>
+    <label for="username" >Username:</label>
+    <input type="text" name="username" id="username_login"/>
+    <br>
+    <label for="password" >Password:</label>
+    <input type="text" name="password" id="password_login"/>
+    <br>
+    <input type="submit" name="submit" class="login_button" id="submit_btn" value="Log In" />
+  	</fieldset>
+	</form>
+	</div>
+
+    <!--div id="signup_form"  style="float:left">
+    <h1>
+    Signup
+    </h1>
+    <form name="mfaSignup" action="">
+    <fieldset>
+    <label for="username" >Username:</label>
+    <input type="text" name="username" id="username_signup"/>
+    <br>
+    <label for="password">Password:</label>
+    <input type="text" name="password" id="password_signup"/>
+    <br>
+    <input type="submit" name="submit" class="signup_button" id="submit_btn" value="Sign Up" />
+    </fieldset>
+    </form>
+    </div-->
+
+    </body>
+</html>
